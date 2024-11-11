@@ -11,24 +11,30 @@
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css">
     <link rel="stylesheet" type="text/css" href="estilo/layout.css">
     <title>Página web personal de Diego Martín Fernández</title>
-    <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "ovfhli6osa");
-    </script>
+    <!-- Script del buscador -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="search.js"></script>
 </head>
 
 <body>
     <header>
-        <h1>Bienvenidos a mi página personal</h1>
+        <h1>Página personal</h1>
         <nav>
             <a href="index.html">Inicio</a>
             <a href="curriculum.html">Currículum</a>
             <a href="sobre_mi.html">Sobre Mí</a>
+
         </nav>
     </header>
+
+    <section>
+        <input type="text" id="search-input" placeholder="Buscar..." />
+        <a href="#" id="search-button">Buscar</a>
+
+        <!-- Contenedor para mostrar los resultados de búsqueda -->
+        <div id="search-results"></div>
+    </section>
+
 
     <!-- Contenido principal de la página -->
     <main>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+    <page>
+        <url>index.html</url>
+        <title>Página Principal - Diego Martín Fernández</title>
+        <content>Bienvenido a la página web personal de Diego Martín Fernández, ingeniero de software apasionado por la tecnología, la lectura y la música. Imagen personal de Diego Martín Fernández...</content>
+    </page>
+    <page>
+        <url>curriculum.html</url>
+        <title>Currículum - Diego Martín Fernández</title>
+        <content>Este es el currículum de Diego Martín Fernández. Ingeniero de software con experiencia en diversas tecnologías de desarrollo. Proyectos realizados incluyen...</content>
+    </page>
+    <page>
+        <url>sobre_mi.html</url>
+        <title>Sobre Mí - Diego Martín Fernández</title>
+        <content>Soy un ingeniero de software enfocado en desarrollo e innovación tecnológica. Me encanta aprender cosas nuevas, la lectura de fantasía y ciencia ficción, la música y el motociclismo...</content>
+    </page>
+</site>
