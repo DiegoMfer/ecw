@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="informática, divulgación científica, juego, deportes, motos, lectura" />
+    <meta name="author" content="Diego Martín Fernández" />
+    <meta name="description" content="Juego interactivo sobre la vida y pasiones de Diego Martín Fernández" />
+    <title>Juego Interactivo de Diego</title>
+    <link rel="icon" href="multimedia/image/favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css">
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="scripts/juego.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>El Mundo de Diego</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="curriculum.html">Currículum</a>
+            <a href="sobre_mi.html">Sobre Mí</a>
+            <a href="juego.html">Juego</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Desafío: ¿Cuánto sabes sobre Diego?</h2>
+            <p>Completa este cuestionario y demuestra que conoces las pasiones de Diego. ¡Contesta correctamente todas las preguntas para ganar!</p>
+            <form>
+                <fieldset>
+                    <legend>(Completa todas las preguntas antes de enviar el formulario)</legend>
+
+                    <h2>Pregunta 1:</h2>
+                    <p>¿Qué área de la informática le apasiona a Diego?</p>
+                    <input type="radio" name="pregunta1" value="false" id="pregunta1_respuesta1">
+                    <label for="pregunta1_respuesta1">a) Desarrollo de videojuegos</label>
+                    <p></p>
+                    <input type="radio" name="pregunta1" value="true" id="pregunta1_respuesta2">
+                    <label for="pregunta1_respuesta2">b) Divulgación científica</label>
+                    <p></p>
+                    <input type="radio" name="pregunta1" value="false" id="pregunta1_respuesta3">
+                    <label for="pregunta1_respuesta3">c) Ciberseguridad</label>
+                    <p></p>
+
+                    <h2>Pregunta 2:</h2>
+                    <p>¿Cuál es el deporte favorito de Diego?</p>
+                    <input type="radio" name="pregunta2" value="false" id="pregunta2_respuesta1">
+                    <label for="pregunta2_respuesta1">a) Baloncesto</label>
+                    <p></p>
+                    <input type="radio" name="pregunta2" value="false" id="pregunta2_respuesta2">
+                    <label for="pregunta2_respuesta2">b) Tenis</label>
+                    <p></p>
+                    <input type="radio" name="pregunta2" value="true" id="pregunta2_respuesta3">
+                    <label for="pregunta2_respuesta3">c) Fútbol</label>
+                    <p></p>
+
+                    <h2>Pregunta 3:</h2>
+                    <p>¿Qué tipo de moto prefiere Diego?</p>
+                    <input type="radio" name="pregunta3" value="false" id="pregunta3_respuesta1">
+                    <label for="pregunta3_respuesta1">a) Moto deportiva</label>
+                    <p></p>
+                    <input type="radio" name="pregunta3" value="false" id="pregunta3_respuesta2">
+                    <label for="pregunta3_respuesta2">b) Moto cruiser</label>
+                    <p></p>
+                    <input type="radio" name="pregunta3" value="true" id="pregunta3_respuesta3">
+                    <label for="pregunta3_respuesta3">c) Moto de aventura</label>
+                    <p></p>
+
+                    <h2>Pregunta 4:</h2>
+                    <p>¿Qué género de libros suele disfrutar Diego?</p>
+                    <input type="radio" name="pregunta4" value="false" id="pregunta4_respuesta1">
+                    <label for="pregunta4_respuesta1">a) Ciencia ficción</label>
+                    <p></p>
+                    <input type="radio" name="pregunta4" value="true" id="pregunta4_respuesta2">
+                    <label for="pregunta4_respuesta2">b) Divulgación científica</label>
+                    <p></p>
+                    <input type="radio" name="pregunta4" value="false" id="pregunta4_respuesta3">
+                    <label for="pregunta4_respuesta3">c) Poesía</label>
+                    <p></p>
+
+                    <h2>Pregunta 5:</h2>
+                    <p>¿Cuál de estas áreas le fascina más a Diego en ciencia?</p>
+                    <input type="radio" name="pregunta5" value="false" id="pregunta5_respuesta1">
+                    <label for="pregunta5_respuesta1">a) Astronomía</label>
+                    <p></p>
+                    <input type="radio" name="pregunta5" value="true" id="pregunta5_respuesta2">
+                    <label for="pregunta5_respuesta2">b) Física</label>
+                    <p></p>
+                    <input type="radio" name="pregunta5" value="false" id="pregunta5_respuesta3">
+                    <label for="pregunta5_respuesta3">c) Biología</label>
+                    <p></p>
+                </fieldset>
+                <input type="submit" value="Enviar" onclick="juego.calcular(); event.preventDefault()">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Creado por Diego Martín Fernández, apasionado de la informática y la ciencia.</p>
+    </footer>
+</body>
+
+</html>
