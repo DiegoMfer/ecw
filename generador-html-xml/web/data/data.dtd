@@ -1,0 +1,30 @@
+<!ELEMENT website (metadata, mainContent)>
+<!ELEMENT metadata (author, description, keywords)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT keywords (#PCDATA)>
+
+<!ELEMENT mainContent (indexPage | curriculumPage | aboutPage)*>
+
+<!ELEMENT indexPage (title, description, section*)>
+<!ELEMENT curriculumPage (title, description, section*)>
+<!ELEMENT aboutPage (title, description, section*)>
+
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+
+<!ELEMENT section (type, content)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT content (title?, description?, text?, hobby*, project*, book*, #PCDATA | EMPTY)>
+<!ATTLIST content
+    src CDATA #IMPLIED
+    alt CDATA #IMPLIED
+>
+
+<!ELEMENT hobby (name, description, books?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT books (book*)>
+<!ELEMENT book (#PCDATA)>
+
+<!ELEMENT project (name, description)>
+<!ELEMENT text (#PCDATA)>

@@ -1,0 +1,63 @@
+<!DOCTYPE website SYSTEM "data.dtd">
+<website>
+    <metadata>
+        <author>Diego Martín Fernández</author>
+        <description>Proyecto ECW - Página web personal de Diego Martín Fernández</description>
+        <keywords>info, persona, hobbies, intereses</keywords>
+    </metadata>
+    
+    <mainContent>
+        <indexPage>
+            <title>Página Principal</title>
+            <welcomeMessage>Bienvenido a la página web personal de Diego Martín Fernández, ingeniero de software apasionado por la tecnología, la lectura y la música.</welcomeMessage>
+            <image src="multimedia/images/yo.jpeg" alt="Imagen personal de Diego Martín Fernández" />
+            <about>
+                <title>Sobre Mí</title>
+                <description>Soy un ingeniero de software con un enfoque en la innovación tecnológica. Me encanta aprender y disfrutar de mis hobbies como la lectura, la música y el motociclismo.</description>
+            </about>
+            <hobbies>
+                <title>Mis Hobbies e Intereses</title>
+                <hobby>
+                    <name>Lectura</name>
+                    <description>Me encanta la fantasía y la ciencia ficción. Algunos de mis libros preferidos son:</description>
+                    <books>
+                        <book>Las Crónicas de Narnia</book>
+                        <book>The Expanse</book>
+                    </books>
+                </hobby>
+                <hobby>
+                    <name>Música</name>
+                    <description>Toco la guitarra y disfruto del rock clásico. Mis bandas favoritas son Led Zeppelin, Pink Floyd y The Beatles.</description>
+                </hobby>
+                <hobby>
+                    <name>Motociclismo</name>
+                    <description>Montar en moto es una de mis grandes pasiones. Disfruto de recorrer nuevos lugares en dos ruedas.</description>
+                </hobby>
+            </hobbies>
+        </indexPage>
+
+        <curriculumPage>
+            <title>Currículum</title>
+            <projects>
+                <project>
+                    <name>RDF in Zarr</name>
+                    <description>Proyecto de investigación sobre motores RDF usando tecnología de particionamiento de arrays en chunks.</description>
+                </project>
+                <project>
+                    <name>Proyecto Dataspaces</name>
+                    <description>Proyecto europeo para usar tecnologías descentralizadas en la agricultura.</description>
+                </project>
+                <project>
+                    <name>Esta página web</name>
+                    <description>Página web personal como proyecto ECW.</description>
+                </project>
+            </projects>
+        </curriculumPage>
+
+        <aboutPage>
+            <title>Sobre Mí</title>
+            <description>Soy un ingeniero de software con un enfoque en el desarrollo y la innovación tecnológica. Me apasiona la tecnología, la lectura y la música.</description>
+        </aboutPage>
+
+    </mainContent>
+</website>
