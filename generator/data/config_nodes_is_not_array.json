@@ -1,0 +1,16 @@
+{
+    "graph": {
+        "nodes": {
+            "id": "n1",
+            "type": "Entity",
+            "properties": {
+                "name": "Node A",
+                "category": "Type 1"
+            }
+        },
+        "predicates": [],
+        "stats": {
+            "number_of_triples": 6
+        }
+    }
+}

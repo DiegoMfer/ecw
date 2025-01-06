@@ -4,36 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador RDF/XML</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        pre {
-            background-color: #f4f4f4;
-            border: 1px solid #ddd;
-            padding: 10px;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/styles.css"> <!-- Link to the CSS file -->
     <script type="module" src="index.js"></script>
 </head>
 <body>
+<section>
     <h1>Generador RDF/XML</h1>
-<p>Selecciona un archivo JSON para cargar la configuración RDF, luego haz clic en "Generar".</p>
-<input type="file" id="fileInput" accept=".json" />
-<button id="loadFileButton">Cargar Archivo</button>
-<button id="generateRDFButton">Generar Grafo RDF/XML</button>
-<h2>Grafo RDF/XML Generado:</h2>
-<pre id="output"></pre>
-
+    <p>Selecciona un archivo JSON para cargar la configuración RDF, luego haz clic en "Generar".</p>
+    <input type="file" id="fileInput" accept=".json" />
     
+    <!-- Use section for buttons, with the class 'buttons-container' for Flexbox styling -->
+    <section class="buttons-container">
+        <button id="loadFileButton">Cargar Archivo</button>
+        <button id="validateGraphJsonButton">Validar Grafo JSON</button>
+        <button id="generateRDFButton">Generar Grafo RDF/XML</button>
+    </section>
+
+    <h2>Grafo RDF/XML Generado:</h2>
+    <pre id="output">
+        Aquí va el output
+    </pre>
+    <h2>Errores:</h2>
+    <pre id="errors">
+        Aquí van los errores
+    </pre>
+</section>
 </body>
 </html>

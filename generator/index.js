@@ -1,7 +1,9 @@
 import init, { generar_rdf, obtener_mensaje } from './generador_rdf/pkg/rdf_generator.js';
+import { validateGraph } from './ts/dist/validator.js';
 
 let wasmInitialized = false;
 let config = null;
+let validated = false;
 
 // Initialize WebAssembly
 async function initializeWasm() {
@@ -47,7 +49,12 @@ function loadFile() {
 async function generateRDF() {
     try {
         if (!config) {
-            alert('First load a JSON file with the RDF configuration.');
+            alert('First load a JSON file with the RDF.');
+            return;
+        }
+
+        if (!validated) {
+            alert('First validate the JSON graph.');
             return;
         }
 
@@ -63,6 +70,29 @@ async function generateRDF() {
     }
 }
 
-document.getElementById('loadFileButton').addEventListener('click', loadFile);
-document.getElementById('generateRDFButton').addEventListener('click', generateRDF);
+function validateGraphJson() {
+    if (!config) {
+        alert('First load a JSON file with the RDF.');
+        return;
+    }
+    
+    validated = true;
+    
+    // Run the validation
+    const validationErrors = validateGraph(config);
+    
+    // Get the 'errors' element and update it
+    const errorsElement = document.getElementById('errors');
+    
+    if (validationErrors.length > 0) {
+        // If there are errors, display them
+        errorsElement.textContent = 'Validation failed with the following errors:\n' + validationErrors.join('\n');
+    } else {
+        // If no errors, display success message
+        errorsElement.textContent = 'Validation successful!';
+    }
+}
 
+document.getElementById('loadFileButton').addEventListener('click', loadFile);
+document.getElementById('validateGraphJsonButton').addEventListener('click', validateGraphJson);
+document.getElementById('generateRDFButton').addEventListener('click', generateRDF);

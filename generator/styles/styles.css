@@ -1,0 +1,104 @@
+/* Specificity: 0 0 1 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Specificity: 0 0 1 */
+body {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Specificity: 0 0 1 */
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Specificity: 0 0 1 */
+h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* Specificity: 0 0 1 */
+h2 {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-top: 20px;
+}
+
+/* Specificity: 0 0 1 */
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #7f8c8d;
+}
+
+/* Specificity: 0 1 1 */
+input[type="file"] {
+    display: inline-block;
+    padding: 10px;
+    margin-right: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Specificity: 0 0 1 */
+button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;  /* Adds space between the buttons */
+}
+
+/* Specificity: 0 0 2 */
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Specificity: 0 0 2 */
+button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+/* Specificity: 0 0 1 */
+pre {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-top: 20px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    color: #2c3e50;
+}
+
+/* Specificity: 0 0 1 */
+section.buttons-container {
+    display: flex;             /* Align buttons in a row */
+    justify-content: flex-start; /* Align them to the left */
+    gap: 10px;                /* Space between buttons */
+    margin-bottom: 20px;      /* Add space below the buttons */
+}
