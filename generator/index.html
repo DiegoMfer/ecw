@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador RDF/XML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        pre {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin-top: 20px;
+        }
+    </style>
+    <script type="module" src="index.js"></script>
+</head>
+<body>
+    <h1>Generador RDF/XML</h1>
+<p>Selecciona un archivo JSON para cargar la configuración RDF, luego haz clic en "Generar".</p>
+<input type="file" id="fileInput" accept=".json" />
+<button id="loadFileButton">Cargar Archivo</button>
+<button id="generateRDFButton">Generar Grafo RDF/XML</button>
+<h2>Grafo RDF/XML Generado:</h2>
+<pre id="output"></pre>
+
+    
+</body>
+</html>

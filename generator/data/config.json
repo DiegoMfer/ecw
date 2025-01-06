@@ -1,0 +1,59 @@
+{
+    "graph": {
+      "nodes": [
+        {
+          "id": "n1",
+          "type": "Entity",
+          "properties": {
+            "name": "Node A",
+            "category": "Type 1"
+          }
+        },
+        {
+          "id": "n2",
+          "type": "Entity",
+          "properties": {
+            "name": "Node B",
+            "category": "Type 2"
+          }
+        },
+        {
+          "id": "n3",
+          "type": "Entity",
+          "properties": {
+            "name": "Node C",
+            "category": "Type 3"
+          }
+        },
+        {
+          "id": "n4",
+          "type": "Entity",
+          "properties": {
+            "name": "Node D",
+            "category": "Type 1"
+          }
+        }
+      ],
+      "predicates": [
+        {
+          "id": "p1",
+          "label": "connected_to",
+          "description": "Represents a general connection between nodes"
+        },
+        {
+          "id": "p2",
+          "label": "related_to",
+          "description": "Represents a general relationship between nodes"
+        },
+        {
+          "id": "p3",
+          "label": "belongs_to",
+          "description": "Represents a membership relationship"
+        }
+      ],
+      "stats": {
+        "number_of_triples": 6
+      }
+    }
+  }
+  
