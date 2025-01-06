@@ -4,6 +4,12 @@ const xml2js = require('xml2js');
 
 // Define the XML file path
 const xmlFilePath = path.join(__dirname, 'data', 'data.xml');
+const webDir = path.join(__dirname, 'web'); // Directory for the generated HTML files
+
+// Create the web directory if it doesn't exist
+if (!fs.existsSync(webDir)) {
+    fs.mkdirSync(webDir, { recursive: true });
+}
 
 // Create an XML parser
 const parser = new xml2js.Parser({
@@ -125,12 +131,12 @@ fs.readFile(xmlFilePath, 'utf-8', (err, data) => {
 
         // Write each HTML file
         pages.forEach(page => {
-            const filePath = path.join(__dirname, page.filename);
+            const filePath = path.join(webDir, page.filename);
             fs.writeFile(filePath, generateHTML(page.title, page.sections, page.links), err => {
                 if (err) {
                     console.error(`Error writing file ${page.filename}:`, err);
                 } else {
-                    console.log(`File ${page.filename} created successfully.`);
+                    console.log(`File ${page.filename} created successfully in the 'web' folder.`);
                 }
             });
         });
