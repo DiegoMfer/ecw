@@ -37,9 +37,9 @@ const generateHTML = (title, sections, links) => `<!DOCTYPE HTML>
     <header>
         <h1>Página personal</h1>
         <nav>
-            <ul>
-                ${links.map(link => `<li><a href="${link.href}">${link.text}</a></li>`).join('\n')}
-            </ul>
+            
+                ${links.map(link => `<a href="${link.href}">${link.text}</a>`).join('\n')}
+           
         </nav>
     </header>
 
@@ -49,6 +49,7 @@ const generateHTML = (title, sections, links) => `<!DOCTYPE HTML>
         <section>
             <h2>${section.title}</h2>
             <p>${section.content}</p>
+            ${section.image ? `<img src="${section.image.src}" alt="${section.image.alt}" />` : ''}
         </section>`).join('\n')}
     </main>
 
@@ -81,7 +82,11 @@ fs.readFile(xmlFilePath, 'utf-8', (err, data) => {
                 filename: 'indexPage.html',
                 title: website.mainContent.indexPage.title,
                 sections: [
-                    { title: 'Bienvenida', content: website.mainContent.indexPage.welcomeMessage },
+                    { 
+                        title: 'Bienvenida', 
+                        content: website.mainContent.indexPage.welcomeMessage,
+                        image: website.mainContent.indexPage.image
+                    },
                     {
                         title: website.mainContent.indexPage.about.title,
                         content: website.mainContent.indexPage.about.description,
